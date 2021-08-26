@@ -1,10 +1,10 @@
-const express = require("pg");
-const app = pg();
+const express = require("express");
+const app = express();
 const cors = require("cors");
 const pool = require("./db");
 
 app.use(cors());
-app.use(pg.json());
+app.use(express.json());
 
 app.post("/employees", async (req, res) => {
     try {
