@@ -2,8 +2,7 @@ import React, { Fragment , useState } from 'react';
 
 const Editemployee = ({employee}) => {
   console.log(employee);
-  let state={name}
-  const name = setState(employee.name);
+  const [name, setName] = useState(employee.name);
 
 
   const changeName = async e => {
