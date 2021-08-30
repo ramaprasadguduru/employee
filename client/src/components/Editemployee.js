@@ -1,6 +1,6 @@
 import React, { Fragment , useState } from 'react';
 
-/*const Editemployee = ({employee}) => {
+const Editemployee = ({employee}) => {
   console.log(employee);
   let state={name}
   const name = setState(employee.name);
@@ -23,7 +23,7 @@ import React, { Fragment , useState } from 'react';
     } catch (err) {
       console.error(err.message)
     }
-  }; */
+  };
 
 
   return (
