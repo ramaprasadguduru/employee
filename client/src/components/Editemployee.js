@@ -9,7 +9,7 @@ const Editemployee = ({employee}) => {
     e.preventDefault(); 
     try {
       const body = { name };
-      const response = await fetch(`http://3.88.169.189/:5000/employees/${employee.employee_id}`, {
+      const response = await fetch(`http://3.88.169.189:5000/employees/${employee.employee_id}`, {
         method: "PUT",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(body)
