@@ -1,12 +1,12 @@
 import React, { Fragment , useState } from 'react';
 
 const Editemployee = ({employee}) => {
-  console.log(employee)
+  console.log(employee);
   const [name, setName] = useState(employee.name);
 
 
   const changeName = async e => {
-    e.preventDefault(); 
+    e.preventDefault();
     try {
       const body = { name };
       const response = await fetch(`http://100.26.106.102:4000/employees/${employee.employee_id}`, {
