@@ -8,7 +8,7 @@ const Listemployees = () => {
   const getemployees = async() => {
     try {
 
-      const response = await fetch("http://3.95.161.111:5000/users");
+      const response = await fetch("http://100.26.106.102:4000/testAPI");
       console.log(response);
       const jsonData = await response.json();
 
@@ -21,7 +21,7 @@ const Listemployees = () => {
 
   const deleteemployee = async (id) => {
     try {
-      const deleteemployee = await fetch(`http://3.95.161.111:5000/users/${id}`, {
+      const deleteemployee = await fetch(`http://100.26.106.102:4000/employees/${id}`, {
         method: "DELETE"
       });
 
@@ -51,7 +51,7 @@ const Listemployees = () => {
           <tr key={employee.employee_id}>
             <td>{employee.name}</td>
             <td>
-              <Editemployee employee={employee} />
+              <Editemployee semployee={employee} />
             </td>
             <td>
               <button className="btn btn-light" onClick={() => deleteemployee(employee.employee_id)}>Delete employee</button> 
