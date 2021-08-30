@@ -1,8 +1,9 @@
 import React, { Fragment , useState } from 'react';
 
-const Editemployee = ({employee}) => {
-  console.log(employee)
-  //const [name, setName] = useState(employee.name);
+/*const Editemployee = ({employee}) => {
+  console.log(employee);
+  let state={name}
+  const name = setState(employee.name);
 
 
   const changeName = async e => {
@@ -22,7 +23,7 @@ const Editemployee = ({employee}) => {
     } catch (err) {
       console.error(err.message)
     }
-  };
+  }; */
 
 
   return (
