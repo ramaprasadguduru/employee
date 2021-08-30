@@ -9,10 +9,11 @@ const Listemployees = () => {
     try {
 
       const response = await fetch("http://100.26.106.102:4000/testAPI");
+      console.log(response);
       const jsonData = await response.json();
 
       setemployees(jsonData);
-      console.log(jsonData)
+      
     } catch (err) {
       console.error(err.message);
     }
