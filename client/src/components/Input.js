@@ -10,7 +10,7 @@ const Input = () => {
       try {
           
           const body = { name };
-          const response = await fetch("http://localhost:5000/employees", {
+          await fetch("http://100.26.106.102:4000/employees", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(body)

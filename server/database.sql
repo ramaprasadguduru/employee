@@ -1,4 +1,4 @@
-CREATE DATABASE testdb;
+CREATE DATABASE register;
 
 CREATE TABLE employees(
   employee_id SERIAL PRIMARY KEY,

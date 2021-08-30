@@ -8,11 +8,12 @@ const Listemployees = () => {
   const getemployees = async() => {
     try {
 
-      const response = await fetch("http://localhost:5000/employees");
+      const response = await fetch("http://100.26.106.102:4000/testAPI");
+      console.log(response);
       const jsonData = await response.json();
 
       setemployees(jsonData);
-      console.log(jsonData)
+      
     } catch (err) {
       console.error(err.message);
     }
@@ -20,7 +21,7 @@ const Listemployees = () => {
 
   const deleteemployee = async (id) => {
     try {
-      const deleteemployee = await fetch(`http://localhost:5000/employees/${id}`, {
+      const deleteemployee = await fetch(`http://100.26.106.102:4000/employees/${id}`, {
         method: "DELETE"
       });
 
