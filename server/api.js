@@ -22,8 +22,8 @@ app.get('/employees', (req, res)=>{
 
 app.post('/add', (req, res)=> {
     const employee = req.body;
-    let insertQuery = `insert into employee1(id,name, job, salary, hiredate, department) 
-                       values(${employee.id},,${employee.name}, '${employee.job}', '${employee.salary}', '${employee.hiredate}', '${employee.department}')`
+    let insertQuery = `insert into employee(name, job, salary, hiredate, department) 
+                       values(${employee.name}, '${employee.job}', '${employee.salary}', '${employee.hiredate}', '${employee.department}')`
 
     client.query(insertQuery, (err, result)=>{
         if(!err){
@@ -36,7 +36,7 @@ app.post('/add', (req, res)=> {
 
 app.put('/update/:id', (req, res)=> {
     let employee = req.body;
-    let updateQuery = `update employee1
+    let updateQuery = `update employee
                        set name = '${employee.name}'
                        where id = ${employee.id}`
 
@@ -50,7 +50,7 @@ app.put('/update/:id', (req, res)=> {
 })
 
 app.delete('/delete/:id', (req, res)=> {
-    let insertQuery = `delete from employee1 where id=${req.params.id}`
+    let insertQuery = `delete from employee where id=${req.params.id}`
 
     client.query(insertQuery, (err, result)=>{
         if(!err){
