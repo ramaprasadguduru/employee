@@ -1,4 +1,4 @@
-# Student Register
+# Student Register.
 
 ## About Student Register
 
