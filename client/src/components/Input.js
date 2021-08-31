@@ -9,7 +9,7 @@ const Input = () => {
       try {
           
           const body = { name };
-          await fetch("http://3.87.141.235:5000/employees", {
+          await fetch("http://3.87.141.235:5000/add", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(body)
