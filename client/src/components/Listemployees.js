@@ -21,7 +21,7 @@ const Listemployees = () => {
 
   const deleteemployee = async (id) => {
     try {
-      const deleteemployee = await fetch(`hhttp://3.87.141.235:5000/users/${id}`, {
+      const deleteemployee = await fetch(`hhttp://3.87.141.235:5000/delete/${id}`, {
         method: "DELETE"
       });
 
