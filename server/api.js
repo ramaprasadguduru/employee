@@ -21,9 +21,9 @@ app.get('/users', (req, res)=>{
 })
 
 app.post('/add', (req, res)=> {
-    const user = req.body;
-    let insertQuery = `insert into users(id, firstname, lastname, location) 
-                       values(${user.id}, '${user.firstname}', '${user.lastname}', '${user.location}')`
+    const employee = req.body;
+    let insertQuery = `insert into employee(name, job, salary, hiredate, department) 
+                       values(${employee.name}, '${employee.job}', '${employee.salary}', '${employee.hiredate}', '${employee.department}')`
 
     client.query(insertQuery, (err, result)=>{
         if(!err){
@@ -35,12 +35,10 @@ app.post('/add', (req, res)=> {
 })
 
 app.put('/update/:id', (req, res)=> {
-    let user = req.body;
-    let updateQuery = `update users
-                       set firstname = '${user.firstname}',
-                       lastname = '${user.lastname}',
-                       location = '${user.location}'
-                       where id = ${user.id}`
+    let employee = req.body;
+    let updateQuery = `update employee
+                       set name = '${employee.name}'
+                       where id = ${employee.id}`
 
     client.query(updateQuery, (err, result)=>{
         if(!err){
@@ -52,7 +50,7 @@ app.put('/update/:id', (req, res)=> {
 })
 
 app.delete('/delete/:id', (req, res)=> {
-    let insertQuery = `delete from users where id=${req.params.id}`
+    let insertQuery = `delete from employee where id=${req.params.id}`
 
     client.query(insertQuery, (err, result)=>{
         if(!err){
