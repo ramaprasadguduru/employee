@@ -11,5 +11,13 @@ app.listen(5000, ()=>{
 })
 
 client.connect();
+app.get('/users', (req, res)=>{
+    client.query(`Select * from employee`, (err, result)=>{
+        if(!err){
+            res.send(result.rows);
+        }
+    });
+    client.end;
+})
 
 
