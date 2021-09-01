@@ -22,8 +22,8 @@ app.get('/employees', (req, res)=>{
 
 app.post('/add', (req, res)=> {
     const employee = req.body;
-    let insertQuery = `insert into employee(name, job, salary, hiredate, department) 
-                       values(${employee.name}, '${employee.job}', '${employee.salary}', '${employee.hiredate}', '${employee.department}')`
+    let insertQuery = `insert into employee(name) 
+                       values('${employee.name}')`
 
     client.query(insertQuery, (err, result)=>{
         if(!err){
