@@ -10,8 +10,6 @@ services:
   nodejs:
     image: gudururamaprasad/employee:latest
     container_name: nodejs
-    depends_on:
-      - postgres
     ports:
       - "5000:5000"
 
