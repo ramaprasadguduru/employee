@@ -8,7 +8,7 @@ const Listemployees = () => {
   const getemployees = async() => {
     try {
 
-      const response = await fetch("http://172.31.87.152:5000/employees");
+      const response = await fetch("http://35.175.137.77:5000/employees");
       console.log(response);
       const jsonData = await response.json();
 
@@ -21,7 +21,7 @@ const Listemployees = () => {
 
   const deleteemployee = async (id) => {
     try {
-      const deleteemployee = await fetch(`hhttp://172.31.87.152:5000/delete/${id}`, {
+      const deleteemployee = await fetch(`hhttp://35.175.137.77:5000/delete/${id}`, {
         method: "DELETE"
       });
 
