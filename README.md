@@ -1,15 +1,15 @@
-# Student Register.
+# employee Register.
 
-## About Student Register
+## About employee Register
 
-**Student Register** is a full-stack application, built with PostgreSQL, Express, React and Node.js, which 
-simulates a students register.
-The user can create students, edit and delete students.
+**employee Register** is a full-stack application, built with PostgreSQL, Express, React and Node.js, which 
+simulates a employee register.
+The user can create employees, edit and delete employees.
 
 
 ## How to run
 
-* Clone the project - git clone https://github.com/emilyjspencer/Student-Register.git
+* Clone the project - git clone https://github.com/emilyjspencer/employee-Register.git
 * Cd into the repo
 * Install Node if you don't have it. Use the package manager Homebrew if you are a Mac user, by running:
 ```html
@@ -28,7 +28,7 @@ npm install
 ```html
 psql postgres
 ```
-* Run the SQL queries that can be found in the database.sql file, to create the Register database and the students table
+* Run the SQL queries that can be found in the database.sql file, to create the Register database and the employees table
 * Run the following to start the server
 ```html
 node app.js
