@@ -38,7 +38,7 @@ app.put('/update/:id', (req, res)=> {
     let employee = req.body;
     let updateQuery = `update employee
                        set name = '${employee.name}'
-                       where id = ${employee.id}`
+                       where id = ${req.params.id}`
 
     client.query(updateQuery, (err, result)=>{
         if(!err){
