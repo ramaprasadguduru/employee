@@ -3,12 +3,11 @@ import React, { Fragment , useState } from 'react';
 const Editemployee = ({employee}) => {
   console.log(employee);
   const [name, setName] = useState(employee.name);
-  const [id, setId] = useState(employee.id);
 
   const changeName = async e => {
     e.preventDefault();
     try {
-      const body = { name, id };
+      const body = { name };
       const response = await fetch(`http://3.82.146.237:5000/update/${employee.id}`, {
         method: "PUT",
         headers: {"Content-Type": "application/json"},
