@@ -1,4 +1,4 @@
-version: "3.0"
+version: "3.1"
 services:
   frontend:
     image: gudururamprasad/employee-board:latest
@@ -8,7 +8,7 @@ services:
       - "3000:3000"
 
   nodejs:
-    image: gudururamprasad/employee-board:latest
+    image: gudururamprasad/employee:latest
     container_name: nodejs
     ports:
       - "5000:5000"
