@@ -34,7 +34,7 @@ const [id, setId] = useState(employee.id);
         data-target={`#id${employee.employee_id}`}>
         Edit employee
         </button>
-      <div className="modal" id={`id${employee.employee_id}`} onClick={() => setName(employee.name)}>
+      <div className="modal" id={`id${employee.id}`} onClick={() => setName(employee.name)}>
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
