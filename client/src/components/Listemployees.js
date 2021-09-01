@@ -25,7 +25,7 @@ const Listemployees = () => {
         method: "DELETE"
       });
 
-      setemployees(employees.filter(employee => employee.employee_id !== id)) 
+      setemployees(employees.filter(employee => employee.id !== id)) 
       console.log(deleteemployee);
     } catch (err) {
       console.errror(err.message) 
@@ -54,7 +54,7 @@ const Listemployees = () => {
               <Editemployee employee={employee} />
             </td>
             <td>
-              <button className="btn btn-light" onClick={() => deleteemployee(employee.employee_id)}>Delete employee</button> 
+              <button className="btn btn-light" onClick={() => deleteemployee(employee.id)}>Delete employee</button> 
             </td>
           </tr>
           ))}
