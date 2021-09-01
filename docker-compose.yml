@@ -8,7 +8,7 @@ services:
       - "3000:3000"
 
   nodejs:
-    image: gudururamaprasad/employee:latest
+    image: gudururamaprasad/employee
     container_name: nodejs
     ports:
       - "5000:5000"
