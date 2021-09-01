@@ -9,7 +9,7 @@ const [name, setName] = useState("");
       try {
           
           const body = { name };
-          await fetch("http://3.88.232.170:5000/add", {
+          await fetch("http://54.175.207.124:5000/add", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(body)
