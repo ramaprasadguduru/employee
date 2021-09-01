@@ -2,14 +2,14 @@ version: "3.0"
 services:
   client:
     image: gudururamprasad/employee-board:latest
-    container_name: client
+    container_name: react
     stdin_open: true
     ports:
       - "3000:3000"
 
   server:
     image: gudururamaprasad/employee:latest
-    container_name: server
+    container_name: nodejs
     depends_on:
       - postgres
     ports:
