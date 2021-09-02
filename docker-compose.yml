@@ -5,16 +5,24 @@ services:
     container_name: react
     stdin_open: true
     ports:
-      - "3000:3000"
+      - "3001:3000"
 
   nodejs:
-    image: gudururamprasad/employee-board:latest
+    image: gudururamprasad/employee:latest
     container_name: nodejs
+    depends_on:
+      - postgres
     ports:
-      - "5000:5000"
+      - "5001:5000"
 
   postgres:
     image: postgres
     container_name: postgresdb
+    environment:
+      DB_SCHEMA: testdb
+      DB_USER: postgres
+      DB_PASSWORD: admin
+      DB_HOST: localhost
     ports:
       - "5433:5432"
+
