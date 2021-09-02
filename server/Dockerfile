@@ -1,9 +1,8 @@
-  
 FROM    node:12-alpine
-RUN     apk add --no-cache nodejs npm
-RUN     mkdir /data
-COPY    package.json /data
-COPY    . /data
-RUN     npm install pg
-CMD     ["node","api.js:run"]
+RUN     mkdir data
+COPY    package*.json data/
+WORKDIR data/
+COPY    . .
+RUN     npm install
+CMD     ["node","api.js"]
 EXPOSE  5000
