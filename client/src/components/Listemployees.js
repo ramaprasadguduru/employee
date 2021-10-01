@@ -8,7 +8,7 @@ const Listemployees = () => {
   const getemployees = async() => {
     try {
 
-      const response = await fetch("http://3.92.212.1:5000/users");
+      const response = await fetch("http://3.92.212.1:5000//users");
       console.log(response);
       const jsonData = await response.json();
 
