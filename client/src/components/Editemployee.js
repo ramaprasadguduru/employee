@@ -8,7 +8,7 @@ const Editemployee = ({employee}) => {
     e.preventDefault();
     try {
       const body = { name };
-      const response = await fetch(`http://172.31.83.168:5000//update/${employee.id}`, {
+      const response = await fetch(`http://3.92.212.1:5000//update/${employee.id}`, {
         method: "PUT",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(body)
