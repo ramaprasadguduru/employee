@@ -1,4 +1,4 @@
-const pool = require('./db.js')
+const client = require('./db.js')
 const express = require('express');
 const cors = require("cors");
 const app = express();
@@ -10,14 +10,14 @@ app.listen(5005, ()=>{
     console.log("Sever is now listening at port 5005");
 })
 
-pool.connect();
+client.connect();
 app.get('/employees', (req, res)=>{
-    pool.query(`Select * from employee`, (err, result)=>{
+    client.query(`Select * from employee`, (err, result)=>{
         if(!err){
             res.send(result.rows);
         }
     });
-    pool.end;
+    client.end;
 })
 
 app.post('/add', (req, res)=> {
@@ -25,13 +25,13 @@ app.post('/add', (req, res)=> {
     let insertQuery = `insert into employee(name) 
                        values('${employee.name}')`
 
-    pool.query(insertQuery, (err, result)=>{
+    client.query(insertQuery, (err, result)=>{
         if(!err){
             res.send('Insertion was successful')
         }
         else{ console.log(err.message) }
     })
-    pool.end;
+    client.end;
 })
 
 app.put('/update/:id', (req, res)=> {
@@ -40,25 +40,25 @@ app.put('/update/:id', (req, res)=> {
                        set name = '${employee.name}'
                        where id = ${req.params.id}`
 
-    pool.query(updateQuery, (err, result)=>{
+    client.query(updateQuery, (err, result)=>{
         if(!err){
             res.send('Update was successful')
         }
         else{ console.log(err.message) }
     })
-    pool.end;
+    client.end;
 })
 
 app.delete('/delete/:id', (req, res)=> {
     let insertQuery = `delete from employee where id=${req.params.id}`
 
-    pool.query(insertQuery, (err, result)=>{
+    client.query(insertQuery, (err, result)=>{
         if(!err){
             res.send('Deletion was successful')
         }
         else{ console.log(err.message) }
     })
-    pool.end;
+    client.end;
 })
 
 
