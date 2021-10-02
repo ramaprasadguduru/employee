@@ -2,11 +2,11 @@ const client = require('./db.js')
 const express = require('express');
 const app = express();
 
-app.listen(5005, ()=>{
+/*app.listen(5005, ()=>{
     console.log("Sever is now listening at port 5005");
 })
 
-client.connect();
+//client.connect();
 
 app.get('/users', (req, res)=>{
     client.query(`Select * from employee`, (err, result)=>{
@@ -14,6 +14,6 @@ app.get('/users', (req, res)=>{
             res.send(result.rows);
         }
     });
-    client.end;
+  //  client.end;
 })
-client.connect();
+client.connect();*/
