@@ -2,8 +2,8 @@ const client = require('./db.js')
 const express = require('express');
 const app = express();
 
-app.listen(5000, ()=>{
-    console.log("Sever is now listening at port 5000");
+app.listen(5005, ()=>{
+    console.log("Sever is now listening at port 5005");
 })
 
 client.connect();
